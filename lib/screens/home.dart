@@ -28,7 +28,7 @@ class _HomepageState extends State<Homepage>
 
   fetchTrending() async {
     var response = await http.get(
-        Uri.parse("https://api.pexels.com/v1/curated?per_page=300"),
+        Uri.parse("https://api.pexels.com/v1/curated?per_page=1000"),
         headers: {"Authorization": myapikey});
     print(response.body.toString());
     Map<String, dynamic> jsondata = jsonDecode(response.body);
@@ -47,7 +47,7 @@ class _HomepageState extends State<Homepage>
   Science() async {
     var response = await http.get(
         Uri.parse(
-            "https://api.pexels.com/v1/search?query=science&per_page=300"),
+            "https://api.pexels.com/v1/search?query=science&per_page=1000"),
         headers: {"Authorization": myapikey});
     print(response.body.toString());
     Map<String, dynamic> jsondata = jsonDecode(response.body);
@@ -66,7 +66,7 @@ class _HomepageState extends State<Homepage>
   Technology() async {
     var response = await http.get(
         Uri.parse(
-            "https://api.pexels.com/v1/search?query=technology&per_page=300"),
+            "https://api.pexels.com/v1/search?query=technology&per_page=1000"),
         headers: {"Authorization": myapikey});
     print(response.body.toString());
     Map<String, dynamic> jsondata = jsonDecode(response.body);
@@ -85,7 +85,8 @@ class _HomepageState extends State<Homepage>
   //Nature
   Nature() async {
     var response = await http.get(
-        Uri.parse("https://api.pexels.com/v1/search?query=nature&per_page=300"),
+        Uri.parse(
+            "https://api.pexels.com/v1/search?query=nature&per_page=1000"),
         headers: {"Authorization": myapikey});
     print(response.body.toString());
     Map<String, dynamic> jsondata = jsonDecode(response.body);
@@ -104,7 +105,7 @@ class _HomepageState extends State<Homepage>
   //dark
   Dark() async {
     var response = await http.get(
-        Uri.parse("https://api.pexels.com/v1/search?query=dark&per_page=300"),
+        Uri.parse("https://api.pexels.com/v1/search?query=dark&per_page=1000"),
         headers: {"Authorization": myapikey});
     print(response.body.toString());
     Map<String, dynamic> jsondata = jsonDecode(response.body);
